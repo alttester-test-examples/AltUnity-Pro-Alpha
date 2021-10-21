@@ -21,17 +21,28 @@ public class TestTrainingScene
     [Test]
     public void TestStartGame()
     {
-	//Here you can write the test
+        altUnityDriver.LoadScene("LobbyScene");
+        var createButton=altUnityDriver.FindObject(By.PATH,"//Buttons/SinglePlayer");
+        createButton.Tap();
+        altUnityDriver.WaitForObject(By.NAME,"SinglePlayerPanel");
+        altUnityDriver.FindObject(By.PATH,"//SinglePlayerPanel//AcceptButton/StartGame").Tap();
+        altUnityDriver.WaitForObject(By.NAME,"SinglePlayerStartGameModal(Clone)");
+        altUnityDriver.FindObject(By.PATH,"//SinglePlayerStartGameModal(Clone)//Start Button").Tap();
     }
     [Test]
     public void TestFireBombs()
     {
-
+        altUnityDriver.LoadScene("Mission1_MoveAndShoot");
+        altUnityDriver.FindObject(By.PATH,"//CompleteTank(Clone)//Panzer").Tap(4);
+        altUnityDriver.WaitForObject(By.NAME,"MuzzleFlash(Clone)");
     }
     [Test]
     public void TestFightEnemy()
     {
-        
+        altUnityDriver.LoadScene("Mission1_MoveAndShoot");
+        altUnityDriver.PressKey(AltUnityKeyCode.W, 1,0.5f);
+
+        // altUnityDriver.FindObject(By.PATH,"//CompleteTank(Clone)//Panzer").Tap();
     }
 
 }
