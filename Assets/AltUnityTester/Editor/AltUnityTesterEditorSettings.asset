@@ -14,16 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   appendToName: 0
   AdbPath: /usr/local/bin/adb
-  IProxyPath: /usr/local/bin/iproxy
-  XcrunPath: /usr/bin/xcrun
-  BuildNumber: 0
   MyTests:
   - _selected: 0
-    _testName: C:/Users/andra.cardas/Desktop/Games/Multiplayer/alttanksmultiplayer-test-python/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+    _testName: C:/Users/andra.cardas/Desktop/example/altunity-pro-alpha-example/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
     _status: 0
     _isSuite: 1
     _parentName: 
-    _testCaseCount: 261
+    _testCaseCount: 262
     _foldOut: 1
     _testResultMessage: 
     _testStackTrace: 
@@ -34,7 +31,7 @@ MonoBehaviour:
     _testName: Altom
     _status: 0
     _isSuite: 1
-    _parentName: C:/Users/andra.cardas/Desktop/Games/Multiplayer/alttanksmultiplayer-test-python/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+    _parentName: C:/Users/andra.cardas/Desktop/example/altunity-pro-alpha-example/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
     _testCaseCount: 2
     _foldOut: 0
     _testResultMessage: 
@@ -106,7 +103,7 @@ MonoBehaviour:
     _testName: AltUnityCommandsTests
     _status: 0
     _isSuite: 1
-    _parentName: C:/Users/andra.cardas/Desktop/Games/Multiplayer/alttanksmultiplayer-test-python/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+    _parentName: C:/Users/andra.cardas/Desktop/example/altunity-pro-alpha-example/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
     _testCaseCount: 1
     _foldOut: 0
     _testResultMessage: 
@@ -130,7 +127,7 @@ MonoBehaviour:
     _testName: PathSelectorTests
     _status: 0
     _isSuite: 1
-    _parentName: C:/Users/andra.cardas/Desktop/Games/Multiplayer/alttanksmultiplayer-test-python/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+    _parentName: C:/Users/andra.cardas/Desktop/example/altunity-pro-alpha-example/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
     _testCaseCount: 40
     _foldOut: 0
     _testResultMessage: 
@@ -682,7 +679,7 @@ MonoBehaviour:
     _testName: TestCreateGameScene
     _status: 0
     _isSuite: 1
-    _parentName: C:/Users/andra.cardas/Desktop/Games/Multiplayer/alttanksmultiplayer-test-python/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+    _parentName: C:/Users/andra.cardas/Desktop/example/altunity-pro-alpha-example/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
     _testCaseCount: 2
     _foldOut: 0
     _testResultMessage: 
@@ -696,7 +693,7 @@ MonoBehaviour:
     _isSuite: 0
     _parentName: TestCreateGameScene
     _testCaseCount: 1
-    _foldOut: 1
+    _foldOut: 0
     _testResultMessage: 
     _testStackTrace: 
     _testDuration: 0
@@ -708,7 +705,7 @@ MonoBehaviour:
     _isSuite: 0
     _parentName: TestCreateGameScene
     _testCaseCount: 1
-    _foldOut: 1
+    _foldOut: 0
     _testResultMessage: 
     _testStackTrace: 
     _testDuration: 0
@@ -718,8 +715,8 @@ MonoBehaviour:
     _testName: TestForScene1TestSample
     _status: 0
     _isSuite: 1
-    _parentName: C:/Users/andra.cardas/Desktop/Games/Multiplayer/alttanksmultiplayer-test-python/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
-    _testCaseCount: 180
+    _parentName: C:/Users/andra.cardas/Desktop/example/altunity-pro-alpha-example/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+    _testCaseCount: 181
     _foldOut: 0
     _testResultMessage: 
     _testStackTrace: 
@@ -2083,6 +2080,18 @@ MonoBehaviour:
     path: Assets/AltUnityTester/Examples/Test/Editor/Driver/Testforscene1TestSample.cs
     _testSelectedCount: 0
   - _selected: 0
+    _testName: TestForScene1TestSample.TestGetComponentPropertyNullValue
+    _status: 0
+    _isSuite: 0
+    _parentName: TestForScene1TestSample
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/AltUnityTester/Examples/Test/Editor/Driver/Testforscene1TestSample.cs
+    _testSelectedCount: 0
+  - _selected: 0
     _testName: TestForScene1TestSample.TestGetComponentPropertyPrivate
     _status: 0
     _isSuite: 0
@@ -2914,7 +2923,7 @@ MonoBehaviour:
     _testName: TestForScene2DraggablePanel
     _status: 0
     _isSuite: 1
-    _parentName: C:/Users/andra.cardas/Desktop/Games/Multiplayer/alttanksmultiplayer-test-python/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+    _parentName: C:/Users/andra.cardas/Desktop/example/altunity-pro-alpha-example/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
     _testCaseCount: 12
     _foldOut: 0
     _testResultMessage: 
@@ -3070,7 +3079,7 @@ MonoBehaviour:
     _testName: TestForScene3DragAndDrop
     _status: 0
     _isSuite: 1
-    _parentName: C:/Users/andra.cardas/Desktop/Games/Multiplayer/alttanksmultiplayer-test-python/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+    _parentName: C:/Users/andra.cardas/Desktop/example/altunity-pro-alpha-example/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
     _testCaseCount: 5
     _foldOut: 0
     _testResultMessage: 
@@ -3142,7 +3151,7 @@ MonoBehaviour:
     _testName: TestForScene4NoCameras
     _status: 0
     _isSuite: 1
-    _parentName: C:/Users/andra.cardas/Desktop/Games/Multiplayer/alttanksmultiplayer-test-python/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+    _parentName: C:/Users/andra.cardas/Desktop/example/altunity-pro-alpha-example/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
     _testCaseCount: 2
     _foldOut: 0
     _testResultMessage: 
@@ -3178,7 +3187,7 @@ MonoBehaviour:
     _testName: TestForScene5KeyboardAndMouseInput
     _status: 0
     _isSuite: 1
-    _parentName: C:/Users/andra.cardas/Desktop/Games/Multiplayer/alttanksmultiplayer-test-python/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+    _parentName: C:/Users/andra.cardas/Desktop/example/altunity-pro-alpha-example/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
     _testCaseCount: 10
     _foldOut: 0
     _testResultMessage: 
@@ -3308,9 +3317,9 @@ MonoBehaviour:
     _testSelectedCount: 0
   - _selected: 1
     _testName: TestHomePage
-    _status: 1
+    _status: -1
     _isSuite: 1
-    _parentName: C:/Users/andra.cardas/Desktop/Games/Multiplayer/alttanksmultiplayer-test-python/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+    _parentName: C:/Users/andra.cardas/Desktop/example/altunity-pro-alpha-example/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
     _testCaseCount: 3
     _foldOut: 0
     _testResultMessage: 
@@ -3320,45 +3329,48 @@ MonoBehaviour:
     _testSelectedCount: 3
   - _selected: 1
     _testName: TestHomePage.TestCustomizeTank
-    _status: 1
+    _status: -1
     _isSuite: 0
     _parentName: TestHomePage
     _testCaseCount: 1
     _foldOut: 0
-    _testResultMessage: 
+    _testResultMessage: 'OneTimeSetUp: Altom.AltUnityDriver.ConnectionTimeoutException
+      : Failed to connect to AltUnity on host: 127.0.0.1 port: 13000.'
     _testStackTrace: 
-    _testDuration: 1.0390296
+    _testDuration: 0
     path: 
     _testSelectedCount: 0
   - _selected: 1
     _testName: TestHomePage.TestShowCredits
-    _status: 1
+    _status: -1
     _isSuite: 0
     _parentName: TestHomePage
     _testCaseCount: 1
     _foldOut: 0
-    _testResultMessage: 
+    _testResultMessage: 'OneTimeSetUp: Altom.AltUnityDriver.ConnectionTimeoutException
+      : Failed to connect to AltUnity on host: 127.0.0.1 port: 13000.'
     _testStackTrace: 
-    _testDuration: 0.2616676
+    _testDuration: 0
     path: 
     _testSelectedCount: 0
   - _selected: 1
     _testName: TestHomePage.TestShowSettings
-    _status: 1
+    _status: -1
     _isSuite: 0
     _parentName: TestHomePage
     _testCaseCount: 1
     _foldOut: 0
-    _testResultMessage: 
+    _testResultMessage: 'OneTimeSetUp: Altom.AltUnityDriver.ConnectionTimeoutException
+      : Failed to connect to AltUnity on host: 127.0.0.1 port: 13000.'
     _testStackTrace: 
-    _testDuration: 0.24021
+    _testDuration: 0
     path: 
     _testSelectedCount: 0
   - _selected: 0
     _testName: TestInputActions
     _status: 0
     _isSuite: 1
-    _parentName: C:/Users/andra.cardas/Desktop/Games/Multiplayer/alttanksmultiplayer-test-python/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+    _parentName: C:/Users/andra.cardas/Desktop/example/altunity-pro-alpha-example/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
     _testCaseCount: 1
     _foldOut: 0
     _testResultMessage: 
@@ -3382,7 +3394,7 @@ MonoBehaviour:
     _testName: TestTrainingScene
     _status: 0
     _isSuite: 1
-    _parentName: C:/Users/andra.cardas/Desktop/Games/Multiplayer/alttanksmultiplayer-test-python/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+    _parentName: C:/Users/andra.cardas/Desktop/example/altunity-pro-alpha-example/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
     _testCaseCount: 3
     _foldOut: 0
     _testResultMessage: 
@@ -3427,7 +3439,7 @@ MonoBehaviour:
     path: Assets/Tests/Editor/Tests/TestTrainingScene.cs
     _testSelectedCount: 0
   - _selected: 1
-    _testName: C:/Users/andra.cardas/Desktop/Games/Multiplayer/alttanksmultiplayer-test-python/Library/ScriptAssemblies/Unity.Rider.Editor.dll
+    _testName: C:/Users/andra.cardas/Desktop/example/altunity-pro-alpha-example/Library/ScriptAssemblies/Unity.Rider.Editor.dll
     _status: 0
     _isSuite: 1
     _parentName: 
@@ -3439,7 +3451,7 @@ MonoBehaviour:
     path: 
     _testSelectedCount: 0
   - _selected: 1
-    _testName: C:/Users/andra.cardas/Desktop/Games/Multiplayer/alttanksmultiplayer-test-python/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll
+    _testName: C:/Users/andra.cardas/Desktop/example/altunity-pro-alpha-example/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll
     _status: 0
     _isSuite: 1
     _parentName: 
@@ -3527,8 +3539,6 @@ MonoBehaviour:
   InputVisualizer: 0
   ShowPopUp: 1
   BuildLocationPath: 
-  LatestInspectorVersion: 1.3.0
   ProxyHost: 127.0.0.1
   ProxyPort: 13000
-  ShowInspectorPopUpInEditor: 0
-  KeepAUTSymbolDefined: 1
+  KeepAUTSymbolDefined: 0
