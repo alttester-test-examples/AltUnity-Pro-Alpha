@@ -1,0 +1,15 @@
+{
+"companyName": "DefaultCompany",
+"productName": "tanks-multiplayer",
+"productVersion": "1.0",
+"dataUrl": "tanks-multiplayer.data.unityweb",
+"wasmCodeUrl": "tanks-multiplayer.wasm.code.unityweb",
+"wasmFrameworkUrl": "tanks-multiplayer.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"developmentBuild": true,
+"multithreading": false,
+"unityVersion": "2019.4.30f1"
+}
