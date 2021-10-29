@@ -15,8 +15,8 @@ namespace Complete
         private string m_MovementAxisName;          // The name of the input axis for moving forward and back.
         private string m_TurnAxisName;              // The name of the input axis for turning.
         private Rigidbody m_Rigidbody;              // Reference used to move the tank.
-        private float m_MovementInputValue;         // The current value of the movement input.
-        private float m_TurnInputValue;             // The current value of the turn input.
+        public float m_MovementInputValue=0.99f;         // The current value of the movement input.
+        public float m_TurnInputValue=0.5f;             // The current value of the turn input.
         private float m_OriginalPitch;              // The pitch of the audio source at the start of the scene.
         private ParticleSystem[] m_particleSystems; // References to all the particles systems used by the Tanks
 
@@ -32,8 +32,8 @@ namespace Complete
             m_Rigidbody.isKinematic = false;
 
             // Also reset the input values.
-            m_MovementInputValue = 0f;
-            m_TurnInputValue = 0f;
+            m_MovementInputValue = 0.99f;
+            m_TurnInputValue = 0.5f;
 
             // We grab all the Particle systems child of that Tank to be able to Stop/Play them on Deactivate/Activate
             // It is needed because we move the Tank when spawning it, and if the Particle System is playing while we do that
@@ -116,17 +116,17 @@ namespace Complete
         }
 
 
-        private void Move ()
+        public void Move ()
         {
             // Create a vector in the direction the tank is facing with a magnitude based on the input, speed and the time between frames.
             Vector3 movement = transform.forward * m_MovementInputValue * m_Speed * Time.deltaTime;
-
+            Debug.Log("input value: "+m_MovementInputValue+" speed: "+m_Speed);
             // Apply this movement to the rigidbody's position.
             m_Rigidbody.MovePosition(m_Rigidbody.position + movement);
         }
 
 
-        private void Turn ()
+        public void Turn ()
         {
             // Determine the number of degrees to be turned based on the input, speed and time between frames.
             float turn = m_TurnInputValue * m_TurnSpeed * Time.deltaTime;

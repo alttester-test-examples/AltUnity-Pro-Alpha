@@ -8,7 +8,10 @@ public class TanksTests
     [OneTimeSetUp]
     public void SetUp()
     {
-        altUnityDriver =new AltUnityDriver();
+        string portStr = System.Environment.GetEnvironmentVariable("PROXY_PORT");
+        int port = 13000;
+        if (!string.IsNullOrEmpty(portStr)) port = int.Parse(portStr);
+        altUnityDriver = new AltUnityDriver(port: port, enableLogging: true);
         altUnityDriver.LoadScene("_Complete-Game");
     }
 
@@ -20,47 +23,54 @@ public class TanksTests
     }
 
     [Test]
-    public void TestTanksArePresent()
+    public void TestGameStart()
     {
 	    altUnityDriver.WaitForObject(By.NAME,"SpawnPoint1");
     	altUnityDriver.WaitForObject(By.NAME,"SpawnPoint2");
     }
 
     [Test]
-    public void TestTanksStartWithFullLife()
+    public void TestPlayerStartsWithFullLife()
     {
         altUnityDriver.WaitForObject(By.NAME,"SpawnPoint1");
     	altUnityDriver.WaitForObject(By.NAME,"SpawnPoint2");
-        altUnityDriver.WaitForObject(By.NAME,"CompleteTank(Clone)");
-        var tankHealth=altUnityDriver.WaitForObject(By.PATH,"//CompleteTank(Clone)/Canvas/HealthSlider/Fill Area/Fill");
-        var slider=tankHealth.GetComponentProperty("UnityEngine.UI.Image", "fillAmount");
-        Assert.AreEqual(slider,"1.0");
+        var tank=altUnityDriver.WaitForObject(By.NAME,"CompleteTank(Clone)");
+        var health=tank.GetComponentProperty("Complete.TankHealth","m_StartingHealth");
+        Assert.AreEqual(health,"100.0");
 
     }
-
     [Test]
-    public void TestPlayer1Moves()
+    public void TestPlayer1Dies()
     {
         altUnityDriver.WaitForObject(By.NAME,"SpawnPoint1");
     	altUnityDriver.WaitForObject(By.NAME,"SpawnPoint2");
-        var tank=altUnityDriver.FindObject(By.NAME,"SpawnPoint1");
-        var initialPosition=tank.getScreenPosition();
-        altUnityDriver.KeyDown(AltUnityKeyCode.UpArrow,1);
-        altUnityDriver.WaitForObject(By.NAME,"CompleteTank(Clone)");
-        var tankHealth=altUnityDriver.WaitForObject(By.PATH,"//CompleteTank(Clone)/Canvas/HealthSlider/Fill Area/Fill");
-        var slider=tankHealth.GetComponentProperty("UnityEngine.UI.Image", "fillAmount");
-        altUnityDriver.KeyUp(AltUnityKeyCode.UpArrow);
-        var finalPosition=tank.getScreenPosition();
-        Assert.AreNotEqual(initialPosition,finalPosition);
+        var tank= altUnityDriver.WaitForObject(By.NAME,"CompleteTank(Clone)");
+        object[] parameters = new object[] { };
+        tank.CallComponentMethod<string>("Complete.TankHealth","OnDeath",parameters);
+        var isDead=tank.GetComponentProperty("Complete.TankHealth","m_Dead");
+        Assert.AreEqual(isDead, "true");
     }
+    [Test]
+    public void TestPlayerTakeDamage()
+    {
+        altUnityDriver.WaitForObject(By.NAME,"SpawnPoint1");
+    	altUnityDriver.WaitForObject(By.NAME,"SpawnPoint2");
+        var tank= altUnityDriver.WaitForObject(By.NAME,"CompleteTank(Clone)");
+        object[] parameters = new object[1] {0.5f};
+        tank.CallComponentMethod<string>("Complete.TankHealth","TakeDamage",parameters);
+        var health=tank.GetComponentProperty("Complete.TankHealth","m_CurrentHealth");
+        Assert.AreEqual(health,"99.5");
+    }
+   
+   
     [Test]
     public void TestPlayer1Attacks()
     {
         altUnityDriver.WaitForObject(By.NAME,"SpawnPoint1");
     	altUnityDriver.WaitForObject(By.NAME,"SpawnPoint2");
-        var tank=altUnityDriver.FindObject(By.NAME,"SpawnPoint1");
-        altUnityDriver.PressKeyAndWait(AltUnityKeyCode.W,2);
-        altUnityDriver.KeyDown(AltUnityKeyCode.Space,2);
+        var tank=altUnityDriver.WaitForObject(By.NAME,"CompleteTank(Clone)");
+        object[] parameters = new object[] { };
+        tank.CallComponentMethod<string>("Complete.TankShooting","Fire",parameters);
         altUnityDriver.WaitForObject(By.NAME,"CompleteShellExplosion");
 
     }
@@ -72,26 +82,9 @@ public class TanksTests
         var tank=altUnityDriver.FindObject(By.NAME,"SpawnPoint2");
         altUnityDriver.KeyDown(AltUnityKeyCode.KeypadEnter,2);
         altUnityDriver.WaitForObject(By.NAME,"CompleteShellExplosion");
-
     }
 
-    [Test]
-    public void TestPlayerMovesWhenAttacked()
-    {
-        altUnityDriver.WaitForObject(By.NAME,"SpawnPoint1");
-    	altUnityDriver.WaitForObject(By.NAME,"SpawnPoint2");
-        var tank=altUnityDriver.FindObject(By.NAME,"SpawnPoint1");
-        var initialPosition=tank.getScreenPosition();
-        altUnityDriver.KeyDown(AltUnityKeyCode.LeftArrow,1);
-        altUnityDriver.WaitForObject(By.NAME,"CompleteTank(Clone)");
-        altUnityDriver.KeyUp(AltUnityKeyCode.LeftArrow);
-        altUnityDriver.KeyDown(AltUnityKeyCode.UpArrow,1);
-        var tankHealth=altUnityDriver.WaitForObject(By.PATH,"//CompleteTank(Clone)/Canvas/HealthSlider/Fill Area/Fill");
-        var slider=tankHealth.GetComponentProperty("UnityEngine.UI.Image", "fillAmount");
-        altUnityDriver.KeyUp(AltUnityKeyCode.UpArrow);
-        var finalPosition=tank.getScreenPosition();
-        Assert.AreNotEqual(initialPosition,finalPosition);
-    }
+   
 
 
 }

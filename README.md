@@ -24,7 +24,8 @@ To run the build that is already in our project in the folder "WebGLbuild":
 ## Running the tests on the WebGL platform
 
 - Open AltUnity Pro Alpha and connect to the WebGL build, don't skip this step as your game needs to connect to the proxy in order to run the tests, which is included in AltUnity Pro Alpha
-- Select some tests from the test assembly and click on "Run Selected Tests"
+- Expand the tests list in AltUnity Tester Editor
+- Select some tests from the test suite named "TanksTests" and click on "Run Selected Tests"
 
 Note: For a better performance, make sure that the tab where you have opened the build is visible on the screen.
 
