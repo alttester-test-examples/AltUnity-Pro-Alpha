@@ -59,7 +59,7 @@ namespace Complete
         }
 
 
-        private void SetHealthUI ()
+        public void SetHealthUI ()
         {
             // Set the slider's value appropriately.
             m_Slider.value = m_CurrentHealth;

@@ -7,10 +7,11 @@ This repository shows a few C# tests that use AltUnity Pro Alpha to run automate
 
  If you want to build the sample game on the WebGL platform from scratch, you have to follow the next steps:
  - Open the sample project in Unity Editor
- - Make the AltUnity Tester Editor window visible (from AltUnityTools->AltUnity Tester Editor)
+ - Make the AltUnity Tester Editor window visible (from AltUnityTools -> AltUnity Tester Editor)
  - In the AltUnity Tester Editor window choose WebGL as your desired platform
  - Choose a location for saving the build
- - Make sure you have the 'Run in background' setting enabled
+ - Make sure you have the 'Run in background' setting enabled (from WebGL player settings -> Resolution and Presentation -> Run in Background*)
+ - Make sure you have the exceptions enabled (from WebGL player settings -> Publishing Settings -> Enable Exceptions: Explicitly Thrown Exceptions Only)
  - Click the "Build & Run" button and wait for the build to start running
 
 ## Run the WebGL build from command line
@@ -28,6 +29,10 @@ To run the build that is already in our project in the folder "WebGLbuild":
 - Select some tests from the test suite named "TanksTests" and click on "Run Selected Tests"
 
 Note: For a better performance, make sure that the tab where you have opened the build is visible on the screen.
+
+Note: When opening this project the first time, you might get the "Deterministic compilation failed." error in console.
+      To solve this problem you have to disable the deterministic compilation. 
+      Follow this link for more information https://tedidev.com/en/blog/2020/08/06/unity-3d-deterministic-compilation-failed-you-can-disable-deterministic-builds-in-player-settings/
 
 
 

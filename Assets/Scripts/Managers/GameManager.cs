@@ -21,8 +21,13 @@ public class GameManager : MonoBehaviour
     private TankManager m_GameWinner;       
 */
 
+    const float k_MaxDepenetrationVelocity = float.PositiveInfinity;
+
     private void Start()
     {
+        // This line fixes a change to the physics engine.
+        Physics.defaultMaxDepenetrationVelocity = k_MaxDepenetrationVelocity;
+        
         m_StartWait = new WaitForSeconds(m_StartDelay);
         m_EndWait = new WaitForSeconds(m_EndDelay);
 
